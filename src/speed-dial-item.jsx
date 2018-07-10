@@ -53,9 +53,9 @@ export class SpeedDialItem extends React.PureComponent {
     }),
   };
 
-  handleTouchTap(ev) {
+  handleClick(ev) {
     this.props.onCloseRequest();
-    this.props.onTouchTap(ev);
+    this.props.onClick(ev);
   }
 
   render() {
@@ -88,7 +88,7 @@ export class SpeedDialItem extends React.PureComponent {
         backgroundColor={this.props.backgroundColor}
         style={this.props.style}
         iconStyle={this.props.iconStyle}
-        onTouchTap={(ev) => { this.handleTouchTap(ev); }}
+        onClick={(ev) => { this.handleClick(ev); }}
       >
         {this.props.fabContent}
       </FloatingActionButton>
