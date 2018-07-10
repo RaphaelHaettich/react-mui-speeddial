@@ -22,7 +22,7 @@ export const SpeedDial = createReactClass({
   },
 
 
-  handleFabTouchTap() {
+  handleFabClick() {
     this.setState({
       internalOpen: !this.state.internalOpen
     });
@@ -33,7 +33,7 @@ export const SpeedDial = createReactClass({
 
 
   handleCloseRequest() {
-    this.handleFabTouchTap();
+    this.handleFabClick();
   },
 
   render: function() {
@@ -61,7 +61,7 @@ export const SpeedDial = createReactClass({
 
       <FloatingActionButton
         {...this.props.fabProps}
-        onTouchTap={this.handleFabTouchTap}
+        onClick={this.handleFabClick}
       >
         <FabSpinner
           aContent={this.props.fabContentOpen}
